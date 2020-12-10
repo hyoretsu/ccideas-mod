@@ -35,7 +35,8 @@
  "lint-staged": {
   "src/**/*.ts": [
    "eslint --fix",
-   "yarn build"
+   "yarn build",
+   "git add dist/*"
   ]
  },
  "dependencies": {},
