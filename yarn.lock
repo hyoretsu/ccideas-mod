@@ -1172,10 +1172,10 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/cookieclicker@^2.31.1":
-  version "2.31.2"
-  resolved "https://registry.yarnpkg.com/@types/cookieclicker/-/cookieclicker-2.31.2.tgz#e51f07742811b510c591f8ee61c7c8680f47ad07"
-  integrity sha512-OjBqS93ep2ic7069VHaf9uAbFR8O5QvGMsnBtcMapkJpSj5nEhoWUsWUbOmsmJy6VlcdPlfHQ0hBpnuykAxZ2Q==
+"@types/cookieclicker@^2.31.3":
+  version "2.31.3"
+  resolved "https://registry.yarnpkg.com/@types/cookieclicker/-/cookieclicker-2.31.3.tgz#e9b8b1c8ed3bde2ae5e34f22886192b9007924d6"
+  integrity sha512-SHAsW8ssEFWDpez8PTfR64teVjQUazMVz9WoH1zpOQpjFzXzQ3OTeT0ccPP4oycrnhEIL1IBHWkIFhmH+qy4ow==
 
 "@types/graceful-fs@^4.1.2":
   version "4.1.4"

@@ -1,46 +1,55 @@
+import ICreateHeavenlyUpgradeDTO from './dtos/ICreateHeavenlyUpgradeDTO';
+
 const CCRedditMod: Game.Mod = {
  name: 'ccreddit_mod',
 };
 
-// Called as soon as the mod is registered, used to declare hooks
+const upgradeIcons = '';
+let order: number;
+CCRedditMod.HeavenlyUpgrades = (data: ICreateHeavenlyUpgradeDTO[]): any => {
+ data.map(upgradeData => {
+  const desc = `${upgradeData.description}<q>${upgradeData.quote}</q>`;
+  const icon: Game.Icon = [upgradeData.icon[0], upgradeData.icon[1], upgradeIcons];
+
+  const upgrade = new Game.Upgrade(upgradeData.name, desc, upgradeData.price, icon);
+  upgrade.mod = 'ccreddit-mod';
+  upgrade.pool = 'prestige';
+
+  upgradeData.parents.map(parent => {
+   return upgrade.parents.push(Game.Upgrades[parent]);
+  });
+
+  Object.assign(Game.UpgradePositions, { [upgrade.id]: upgradeData.position });
+
+  return upgrade;
+ });
+};
+
 CCRedditMod.init = () => {
- // Called every few seconds to check for upgrade/achievement unlock conditions
- Game.registerHook('check', () => {});
- // Called when the big cookie is clicked
- Game.registerHook('click', () => {});
- // Called when determining the cookies per click
- Game.registerHook('cookiesPerClick', () => {});
- // Called when determining the CpS
- Game.registerHook('cps', (cps: number) => {
-  return cps;
- });
- // Called after registering buildings/upgrades/achievements, use it to create custom content
- Game.registerHook('create', () => {});
- // Called every draw tick
- Game.registerHook('draw', () => {});
- // Called every logic tick
- Game.registerHook('logic', () => {});
- // Called when the player reincarnates after an ascension
- Game.registerHook('reincarnate', () => {});
- // Called whenever the player resets; parameter is true for hard reset and false for ascension
- Game.registerHook('reset', (state: boolean) => {
-  if (state === false) {
+ // Ran after registering building/upgrades/achievements, use it to create custom content
+ Game.registerHook('create', () => {
+  if (CCRedditMod.HeavenlyUpgrades) {
+   CCRedditMod.HeavenlyUpgrades([
+    {
+     name: 'Misfortune cookies',
+     description: 'The news ticker may occasionally have <b>misfortunes</b>, which may be clicked for "something".',
+     quote: '',
+     price: 666.666666,
+     icon: [1, 0],
+     parents: ['Fortune cookies'],
+     position: [-173, 147],
+    },
+   ]);
   }
-  if (state === true) {
-  }
- });
- // Called when determining news ticker text
- Game.registerHook('ticker', () => {
-  return [''];
  });
 };
-
-// Use this to store persistent data associated with your mod
 CCRedditMod.save = () => {
- return JSON.stringify({});
+ return JSON.stringify({
+  test: true,
+ });
 };
-
-// Do stuff with the string returned in save()
-CCRedditMod.load = (save: string) => {};
+CCRedditMod.load = (save: string) => {
+ console.log(JSON.parse(save));
+};
 
 Game.registerMod(CCRedditMod.name, CCRedditMod);
