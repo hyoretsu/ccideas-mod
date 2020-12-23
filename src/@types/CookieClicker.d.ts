@@ -12,7 +12,7 @@ declare namespace Game {
  export interface Mod {
   name: string;
 
-  HeavenlyUpgrades?: (data: ICreateHeavenlyUpgradeDTO[]) => Game.Upgrade;
+  HeavenlyUpgrades: (data: ICreateHeavenlyUpgradeDTO[]) => Game.Upgrade;
  }
 
  export interface Upgrade {

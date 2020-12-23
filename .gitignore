@@ -1,6 +1,6 @@
 /dist/*
-!/dist/main.js
-!/dist/main.js.map
+!/dist/CCRedditMod.js
+!/dist/CCRedditMod.js.map
 /node_modules
 tmp/*
 *.log
