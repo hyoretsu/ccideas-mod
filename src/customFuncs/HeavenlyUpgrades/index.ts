@@ -1,19 +1,19 @@
-const HeavenlyUpgrades = (data: ICreateHeavenlyUpgradeDTO[]): any => {
- data.map(upgradeData => {
-  const desc = `${upgradeData.description}<q>${upgradeData.quote}</q>`;
+const HeavenlyUpgrades = (data: ICreateHeavenlyUpgradeDTO[]): void => {
+ data.forEach(upgradeData => {
+  const desc = `${upgradeData.description}${upgradeData.quote ? `<q>${upgradeData.quote}</q>` : ''}`;
   const icon: Game.Icon = [upgradeData.icon[0], upgradeData.icon[1], process.env.UPGRADE_ICONS_URL];
 
   const upgrade = new Game.Upgrade(upgradeData.name, desc, upgradeData.price, icon);
-  upgrade.mod = 'ccreddit-mod';
   upgrade.pool = 'prestige';
+  upgrade.order = upgradeData.order;
 
-  upgradeData.parents.map(parent => {
-   return upgrade.parents.push(Game.Upgrades[parent]);
+  upgradeData.parents.forEach(parent => {
+   upgrade.parents.push(Game.Upgrades[parent]);
   });
 
-  Object.assign(Game.UpgradePositions, { [upgrade.id]: upgradeData.position });
+  [upgrade.posX, upgrade.posY] = upgradeData.position;
 
-  return upgrade;
+  Game.PrestigeUpgrades.push(upgrade);
  });
 };
 

@@ -6,16 +6,19 @@ interface ICreateHeavenlyUpgradeDTO {
  icon: [column: number, line: number];
  parents: string[];
  position: [x: number, y: number];
+ order: number;
 }
 
 declare namespace Game {
  export interface Mod {
-  name: string;
-
-  HeavenlyUpgrades: (data: ICreateHeavenlyUpgradeDTO[]) => Game.Upgrade;
+  HeavenlyUpgrades: (data: ICreateHeavenlyUpgradeDTO[]) => void;
  }
 
  export interface Upgrade {
   mod?: string;
+  posX?: number;
+  posY?: number;
  }
+
+ export const PrestigeUpgrades: Game.Upgrade[];
 }

@@ -16,6 +16,7 @@ interface CustomConfig extends webpack.Configuration {
 }
 
 const config: CustomConfig = {
+ cache: true,
  devtool: 'source-map',
  entry: path.resolve(__dirname, 'src', 'main.ts'),
  mode: 'production',

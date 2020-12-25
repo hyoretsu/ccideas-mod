@@ -6,10 +6,11 @@ const createHook = (): void => {
    name: 'Misfortune cookies',
    description: 'The news ticker may occasionally have <b>misfortunes</b>, which may be clicked for "something".',
    quote: '',
-   price: 666.666666,
+   price: 66666666666,
    icon: [0, 1],
-   parents: ['Fortune cookies'],
-   position: [-173, 147],
+   parents: ['Distilled essence of redoubled luck'],
+   position: [75, 495],
+   order: 644,
   },
  ]);
 };
