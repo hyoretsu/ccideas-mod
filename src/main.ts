@@ -3,7 +3,7 @@ import save from './save';
 import load from './load';
 import { HeavenlyUpgrades } from './customFuncs';
 
-const CCRedditMod: Game.Mod = {
+const CCRedditMod: CustomMod = {
  init,
  save,
  load,

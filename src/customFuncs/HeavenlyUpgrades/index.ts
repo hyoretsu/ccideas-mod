@@ -4,6 +4,7 @@ const HeavenlyUpgrades = (data: ICreateHeavenlyUpgradeDTO[]): void => {
   const icon: Game.Icon = [upgradeData.icon[0], upgradeData.icon[1], process.env.UPGRADE_ICONS_URL];
 
   const upgrade = new Game.Upgrade(upgradeData.name, desc, upgradeData.price, icon);
+  upgrade.mod = 'ccreddit_mod';
   upgrade.pool = 'prestige';
   upgrade.order = upgradeData.order;
 
