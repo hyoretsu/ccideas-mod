@@ -5,7 +5,7 @@ const save = (): string => {
  };
 
  Game.UpgradesById.forEach(upgrade => {
-  if (upgrade.mod === 'ccreddit_mod') {
+  if (upgrade.mod === process.env.MOD_NAME) {
    if (upgrade.bought) {
     saveObj.boughtUpgrades.push(upgrade.name);
    }

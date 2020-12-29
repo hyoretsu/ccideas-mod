@@ -28,7 +28,15 @@ const config: CustomConfig = {
     use: {
      loader: 'babel-loader',
      options: {
-      presets: ['@babel/preset-env', '@babel/preset-typescript'],
+      presets: [
+       [
+        '@babel/preset-env',
+        {
+         targets: '> 1.5%, not dead, supports es6-module',
+        },
+       ],
+       '@babel/preset-typescript',
+      ],
      },
     },
    },
@@ -45,7 +53,7 @@ const config: CustomConfig = {
  },
  output: {
   path: path.resolve(__dirname, 'dist'),
-  filename: 'CCRedditMod.js',
+  filename: 'CCIdeas.js',
  },
 };
 

@@ -1,13 +1,11 @@
 import init from './init';
 import save from './save';
 import load from './load';
-import { HeavenlyUpgrades } from './customFuncs';
 
-const CCRedditMod: CustomMod = {
+const CCIdeas: Game.Mod = {
  init,
  save,
  load,
- HeavenlyUpgrades,
 };
 
-Game.registerMod('ccreddit_mod', CCRedditMod);
+Game.registerMod(process.env.MOD_NAME, CCIdeas);

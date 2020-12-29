@@ -23,6 +23,8 @@
   "@typescript-eslint/no-empty-function": "warn",
   "@typescript-eslint/no-explicit-any": "off",
   "@typescript-eslint/no-unused-vars": "off",
+  // Orteil is dumb so this is necessary
+  "@typescript-eslint/ban-ts-comment": "off",
   "default-case": "off",
   "import/extensions": [
    "error",
@@ -34,9 +36,12 @@
   "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
   "no-empty": "warn",
   "no-new": "off",
+  "no-new-func": "off",
   "no-prototype-builtins": "off",
   "no-restricted-syntax": "off",
   "no-underscore-dangle": "off",
+  // Way prettier than writing it all as one string
+  "no-useless-concat": "off",
   "prettier/prettier": "error"
  },
  "settings": {
