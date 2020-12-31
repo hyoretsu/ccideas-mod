@@ -1,7 +1,6 @@
 import { TransformOptions as BabelOptions } from '@babel/core';
-import dotenv from 'dotenv';
 import path from 'path';
-import webpack, { DefinePlugin } from 'webpack';
+import webpack from 'webpack';
 
 interface CustomRules extends webpack.RuleSetRule {
  use: {
@@ -42,11 +41,6 @@ const config: CustomConfig = {
    },
   ],
  },
- plugins: [
-  new DefinePlugin({
-   'process.env': JSON.stringify(dotenv.config().parsed),
-  }),
- ],
  resolve: {
   extensions: ['.ts'],
   modules: [path.resolve(__dirname, 'src')],

@@ -1,3 +1,5 @@
+import { modName } from '../config';
+
 const save = (): string => {
  const saveObj: ISave = {
   boughtUpgrades: [],
@@ -5,7 +7,7 @@ const save = (): string => {
  };
 
  Game.UpgradesById.forEach(upgrade => {
-  if (upgrade.mod === process.env.MOD_NAME) {
+  if (upgrade.mod === modName) {
    if (upgrade.bought) {
     saveObj.boughtUpgrades.push(upgrade.name);
    }

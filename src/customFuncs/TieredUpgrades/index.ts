@@ -1,7 +1,9 @@
+import { modName, upgradeIconsUrl } from 'config';
+
 const TieredUpgrades = (data: ICreateTieredUpgradeDTO[]): void => {
  data.forEach(upgradeData => {
   const desc = `${upgradeData.description}${upgradeData.quote ? `<q>${upgradeData.quote}</q>` : ''}`;
-  const icon: Game.Icon = [upgradeData.icon[0], upgradeData.icon[1], process.env.UPGRADE_ICONS_URL];
+  const icon: Game.Icon = [upgradeData.icon[0], upgradeData.icon[1], upgradeIconsUrl];
 
   const upgrade = new Game.Upgrade(
    upgradeData.name,
@@ -13,7 +15,7 @@ const TieredUpgrades = (data: ICreateTieredUpgradeDTO[]): void => {
    icon,
   );
   upgrade.tier = upgradeData.tier;
-  upgrade.mod = process.env.MOD_NAME;
+  upgrade.mod = modName;
   upgrade.order = upgradeData.order;
 
   if (upgradeData.building) {
