@@ -1,4 +1,4 @@
 const modName = 'Cookie Clicker OC Ideas';
-const upgradeIconsUrl = 'https://i.imgur.com/8n2doVH.png';
+const upgradeIconsUrl = 'https://hyoretsu.github.io/ccideas-mod/static/upgrades.png';
 
 export { modName, upgradeIconsUrl };
