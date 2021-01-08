@@ -1,0 +1,20 @@
+/* Misfortune tier */
+#misfortune {
+ color: #7e5a40;
+ cursor: pointer;
+}
+#misfortune:hover {
+ color: #b45a40;
+ text-shadow: 0 0 4px #7e5a40;
+}
+#misfortune .icon {
+ vertical-align: middle;
+ display: inline-block;
+ background-image: url('https://hyoretsu.github.io/ccideas-mod/static/upgrades.png');
+ background-position: 0 -48px;
+ transform: scale(0.5);
+ margin: -16px;
+ position: relative;
+ left: -4px;
+ top: -2px;
+}

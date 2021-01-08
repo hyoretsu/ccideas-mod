@@ -4,7 +4,7 @@
   "baseUrl": "./src",
   "esModuleInterop": true,
   "forceConsistentCasingInFileNames": true,
-  "lib": ["es6"],
+  "lib": ["DOM", "es6"],
   "module": "commonjs",
   "outDir": "./dist",
   "pretty": true,

@@ -22,6 +22,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #502',
    description: 'Grandmas are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   quote: 'test',
    icon: [4, 0],
    building: 'Grandma',
    tier: misfortuneName,
@@ -31,6 +32,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #503',
    description: 'Farms are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   quote: 'test',
    icon: [5, 0],
    building: 'Farm',
    tier: misfortuneName,
@@ -40,6 +42,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #504',
    description: 'Mines are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   quote: 'test',
    icon: [6, 0],
    building: 'Mine',
    tier: misfortuneName,
@@ -94,6 +97,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #510',
    description: 'Alchemy labs are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   quote: 'test',
    icon: [12, 0],
    building: 'Alchemy lab',
    tier: misfortuneName,
@@ -103,6 +107,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #511',
    description: 'Portals are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   quote: 'test',
    icon: [13, 0],
    building: 'Portal',
    tier: misfortuneName,
@@ -112,6 +117,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #512',
    description: 'Time machines are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   quote: 'test',
    icon: [14, 0],
    building: 'Time machine',
    tier: misfortuneName,
@@ -139,6 +145,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #515',
    description: 'Chancemakers are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   quote: 'test',
    icon: [17, 0],
    building: 'Chancemaker',
    tier: misfortuneName,
@@ -148,6 +155,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #516',
    description: 'Fractal engines are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   quote: 'test',
    icon: [18, 0],
    building: 'Fractal engine',
    tier: misfortuneName,
@@ -196,6 +204,7 @@ const createHook = (): void => {
    name: 'Misfortune #602',
    description:
     'You gain <b>+1%</b> of your regular CpS while the game is closed <small>(provided you have the Twin Gates of Transcendence heavenly upgrade)</small>.',
+   quote: 'test',
    price: misfortunePrice * 1e11,
    priceFunc: misfortunePriceFunc,
    icon: [0, 0],
@@ -217,6 +226,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #604',
    description: 'Clicking gains <b>+1% of your CpS</b>.',
+   quote: 'test',
    price: misfortunePrice * 1e11,
    priceFunc: misfortunePriceFunc,
    icon: [2, 0],
@@ -227,6 +237,7 @@ const createHook = (): void => {
   // {
   //  name: 'Misfortune #666',
   //  description: 'Grandmas are <b>twice</b> as efficient.',
+  // quote: 'test',
   //  price: 6.666e51,
   //  icon: [19, 2],
   //  tier: misfortuneName,

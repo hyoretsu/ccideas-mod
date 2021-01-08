@@ -17,37 +17,30 @@ interface CustomConfig extends webpack.Configuration {
 const config: CustomConfig = {
  cache: true,
  devtool: 'source-map',
- entry: path.resolve(__dirname, 'src', 'main.ts'),
+ entry: {
+  CCIdeas: path.resolve(__dirname, 'src', 'main.ts'),
+ },
  mode: 'production',
  module: {
   rules: [
    {
-    test: /\.ts?$/,
+    test: /\.ts$/i,
     exclude: /node_modules/,
     use: {
      loader: 'babel-loader',
      options: {
-      presets: [
-       [
-        '@babel/preset-env',
-        {
-         targets: '> 1.5%, not dead, supports es6-module',
-        },
-       ],
-       '@babel/preset-typescript',
-      ],
+      presets: [['@babel/preset-env', { targets: '> 1.5%, not dead' }], '@babel/preset-typescript'],
      },
     },
    },
   ],
  },
+ output: {
+  path: path.resolve(__dirname, 'dist'),
+ },
  resolve: {
   extensions: ['.ts'],
   modules: [path.resolve(__dirname, 'src')],
- },
- output: {
-  path: path.resolve(__dirname, 'dist'),
-  filename: 'CCIdeas.js',
  },
 };
 
