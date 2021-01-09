@@ -18,31 +18,30 @@ const createHook = (): void => {
    tier: misfortuneName,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #502',
    description: 'Grandmas are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
-   quote: 'test',
+   quote: 'A wrinkle is a crack on the only home you have.',
    icon: [4, 0],
    building: 'Grandma',
    tier: misfortuneName,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #503',
    description: 'Farms are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
-   quote: 'test',
+   // Kiz3r's
+   quote: 'Famine is inevitable.',
    icon: [5, 0],
    building: 'Farm',
    tier: misfortuneName,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #504',
    description: 'Mines are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
-   quote: 'test',
+   // Kiz3r's
+   quote: "The collapse under your life's work.",
    icon: [6, 0],
    building: 'Mine',
    tier: misfortuneName,
@@ -69,7 +68,7 @@ const createHook = (): void => {
   {
    name: 'Misfortune #507',
    description: 'Temples are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
-   quote: 'No idol deservers worship.',
+   quote: 'No idol deserves worship.',
    icon: [9, 0],
    building: 'Temple',
    tier: misfortuneName,
@@ -93,31 +92,31 @@ const createHook = (): void => {
    tier: misfortuneName,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #510',
    description: 'Alchemy labs are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
-   quote: 'test',
+   // Kiz3r's
+   quote: "You're turning diamonds into coal.",
    icon: [12, 0],
    building: 'Alchemy lab',
    tier: misfortuneName,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #511',
    description: 'Portals are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
-   quote: 'test',
+   // Kiz3r's
+   quote: 'Welcoming unwanted visitors.',
    icon: [13, 0],
    building: 'Portal',
    tier: misfortuneName,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #512',
    description: 'Time machines are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
-   quote: 'test',
+   // Kiz3r's
+   quote: 'You cannot run from time.',
    icon: [14, 0],
    building: 'Time machine',
    tier: misfortuneName,
@@ -141,21 +140,21 @@ const createHook = (): void => {
    tier: misfortuneName,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #515',
    description: 'Chancemakers are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
-   quote: 'test',
+   // Kiz3r's
+   quote: "Life's the gamble you will never win.",
    icon: [17, 0],
    building: 'Chancemaker',
    tier: misfortuneName,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #516',
    description: 'Fractal engines are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
-   quote: 'test',
+   // Kiz3r's
+   quote: 'Losing yourself by finding others.',
    icon: [18, 0],
    building: 'Fractal engine',
    tier: misfortuneName,
@@ -199,12 +198,12 @@ const createHook = (): void => {
    tier: misfortuneName,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #602',
    description:
     'You gain <b>+1%</b> of your regular CpS while the game is closed <small>(provided you have the Twin Gates of Transcendence heavenly upgrade)</small>.',
-   quote: 'test',
+   // Kiz3r's
+   quote: "Help, I'm trapped in a CC mod!",
    price: misfortunePrice * 1e11,
    priceFunc: misfortunePriceFunc,
    icon: [0, 0],
@@ -222,11 +221,11 @@ const createHook = (): void => {
    kitten: true,
    order: misfortuneOrder,
   },
-  // Missing quote
   {
    name: 'Misfortune #604',
    description: 'Clicking gains <b>+1% of your CpS</b>.',
-   quote: 'test',
+   // Think of something better
+   quote: 'Remember to not stay in touch.',
    price: misfortunePrice * 1e11,
    priceFunc: misfortunePriceFunc,
    icon: [2, 0],
@@ -237,7 +236,8 @@ const createHook = (): void => {
   // {
   //  name: 'Misfortune #666',
   //  description: 'Grandmas are <b>twice</b> as efficient.',
-  // quote: 'test',
+  //  // Kiz3r's
+  //  quote: 'Old but not wise.',
   //  price: 6.666e51,
   //  icon: [19, 2],
   //  tier: misfortuneName,
