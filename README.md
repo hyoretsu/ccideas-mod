@@ -11,7 +11,7 @@ I get notifications from [Reddit](https://www.reddit.com/user/hyoretsu) and my D
 <br/>
 <pre>
 javascript: (function() {
-	Game.LoadMod('https://aktanusa.github.io/CookieMonster/CookieMonster.js');
+	Game.LoadMod('https://hyoretsu.github.io/ccideas-mod/dist/CCIdeas.js');
 }());
 </pre>
 </details>
@@ -33,7 +33,7 @@ javascript: (function() {
 (function() {
     const checkReady = setInterval(function() {
         if (typeof Game.ready !== 'undefined' && Game.ready) {
-            Game.LoadMod('https://aktanusa.github.io/CookieMonster/CookieMonster.js');
+            Game.LoadMod('https://hyoretsu.github.io/ccideas-mod/dist/CCIdeas.js');
             clearInterval(checkReady);
         }
     }, 1000);
