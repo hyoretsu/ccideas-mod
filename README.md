@@ -2,7 +2,7 @@
 
 A collection of ideas taken from Reddit/Discord for Cookie Clicker mods. Anything goes, as long as you have the sprite/someone willing to make it. You can also suggest ideas for unlock conditions/name/quote. (By default they'll be very bland, like Cheese cursors and no quote since that'd require creativity which I lack)
 <br/>
-I get notifications from [Reddit](https://www.reddit.com/user/hyoretsu) and my Discord tag is [Hyoretsu#3939](#) (preferred)
+I get notifications from [Reddit](https://www.reddit.com/user/hyoretsu) and my Discord tag is **Hyoretsu#3939** (preferred)
 
 # Usage
 
