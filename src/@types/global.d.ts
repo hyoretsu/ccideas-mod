@@ -10,7 +10,7 @@ interface ICreateTieredUpgradeDTO {
  building?: string;
  tier: number | string;
  kitten?: true;
- order: number;
+ order?: number;
 }
 
 interface ICreateHeavenlyUpgradeDTO {

@@ -40,6 +40,7 @@
   "no-prototype-builtins": "off",
   "no-restricted-syntax": "off",
   "no-underscore-dangle": "off",
+  "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
   // Way prettier than writing it all as one string
   "no-useless-concat": "off",
   "prettier/prettier": "error"

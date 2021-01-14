@@ -15,6 +15,30 @@ const customMods = (): void => {
  link.href = 'https://hyoretsu.github.io/ccideas-mod/static/styles.css';
  document.getElementsByTagName('head')[0].appendChild(link);
 
+ // Aura tier
+ Object.assign(Game.Tiers, {
+  aura: {
+   color: '#ff7e00',
+   iconRow: 3,
+   name: 'Aura',
+   price: 111111111111111111111111111111111111111111111,
+   special: 1,
+   unlock: -1,
+   upgrades: [],
+  },
+ });
+ // Luminous tier
+ Object.assign(Game.Tiers, {
+  luminous: {
+   color: '#ddb466',
+   iconRow: 4,
+   name: 'Luminous',
+   price: 111111111111111111111111111111111111111111111,
+   special: 1,
+   unlock: -1,
+   upgrades: [],
+  },
+ });
  // Misfortune tier
  Object.assign(Game.Tiers, {
   misfortune: {
@@ -22,11 +46,12 @@ const customMods = (): void => {
    iconRow: 0,
    name: 'Misfortune',
    price: misfortunePrice,
+   special: 1,
    unlock: -1,
    upgrades: [],
-   special: 1,
   },
  });
+
  tickerAddons.push(
   // eslint-disable-next-line no-template-curly-in-string
   'if(!manual&&Game.Has("Misfortune cookies")&&Math.random()<(Game.HasAchiev("O Fortuna")?0.04:0.02)){const misfortunes=[];Game.Tiers.misfortune.upgrades.forEach(upgrade=>{if(!upgrade.unlocked){ misfortunes.push(upgrade);}});if(misfortunes.length>0){list=[];const chosenNews=choose(misfortunes);Game.TickerEffect={type:"fortune",sub:chosenNews};console.log(chosenNews);list=[`<span id="misfortune"><div class="icon"></div>${chosenNews.name.split(" ")[1]} : ${chosenNews.baseDesc.split("<q>")[1].split("</q>")[0]}</span>`,]}}',
