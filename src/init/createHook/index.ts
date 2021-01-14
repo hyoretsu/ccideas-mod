@@ -117,7 +117,7 @@ const createHook = (): void => {
   {
    name: 'Aura prism',
    description: 'Prisms are <b>twice</b> as efficient.',
-   quote: "Well, light is energy, isn't it? Now you're making cookies from aura.",
+   quote: "Light is energy, isn't it? Now you're making cookies out of aura.",
    icon: [16, 3],
    building: 'Prism',
    tier: auraName,
@@ -125,7 +125,7 @@ const createHook = (): void => {
   {
    name: 'Aura dice',
    description: 'Chancemakers are <b>twice</b> as efficient.',
-   quote: "Yes, you've found a way to use your comprehension of the world to affect your luck and get more cookies.",
+   quote: "Yes, you've found a way to use your understanding of the world to affect your luck and get more cookies.",
    icon: [17, 3],
    building: 'Chancemaker',
    tier: auraName,
@@ -150,7 +150,7 @@ const createHook = (): void => {
    name: 'Aura multiverse',
    description: 'Idleverses are <b>twice</b> as efficient.',
    quote:
-    "It is said that when one's understanding of the Martial Dao gets too profound, an ocean starts forming inside of his own body, eventually becoming a full-fledged world",
+    "It is said that when one's understanding of the Martial Dao gets too profound, an ocean starts forming inside of his own body, eventually becoming a full-fledged world.",
    icon: [20, 3],
    building: 'Idleverse',
    tier: auraName,
@@ -221,7 +221,7 @@ const createHook = (): void => {
    name: 'Luminous fuel',
    description: 'Shipments are <b>twice</b> as efficient.',
    quote:
-    'By mixing normal fuel and a solution of a mysterious luminous powder and alchohol, the fuel becomes highly more potent.',
+    'By mixing normal fuel and a solution of a mysterious luminous powder and alchohol, it becomes highly more potent.',
    icon: [11, 4],
    building: 'Shipment',
    tier: luminousName,
@@ -237,7 +237,7 @@ const createHook = (): void => {
   {
    name: 'Luminous portal',
    description: 'Portals are <b>twice</b> as efficient.',
-   quote: "The portal to Heaven will surely have a godly light, right? And it'll obviously be packed with cookies.",
+   quote: "The portal to heaven will surely have a godly light, right? And it'll obviously be packed with cookies.",
    icon: [13, 4],
    building: 'Portal',
    tier: luminousName,
@@ -271,8 +271,7 @@ const createHook = (): void => {
   {
    name: 'Luminous dice',
    description: 'Chancemakers are <b>twice</b> as efficient.',
-   quote:
-    "Now there are sparks whenever you spawn cookies. It's entertaining, which in turn makes people do it more often.",
+   quote: "Now there are sparks whenever you spawn cookies. It's entertaining, so people do it more often.",
    icon: [17, 4],
    building: 'Chancemaker',
    tier: luminousName,
