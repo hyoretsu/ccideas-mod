@@ -14,18 +14,21 @@ const TieredUpgrades = (data: ICreateTieredUpgradeDTO[]): void => {
       Game.Objects[upgradeData.building].basePrice * Game.Tiers[upgradeData.tier].price,
    icon,
   );
-  upgrade.tier = upgradeData.tier;
   upgrade.mod = modName;
-  upgrade.order = upgradeData.order;
 
   if (upgradeData.building) {
-   upgrade.buildingTie = Game.Objects[upgradeData.building];
-   upgrade.buildingTie1 = Game.Objects[upgradeData.building];
-   // @ts-ignore
-   Game.Objects[upgradeData.building].tieredUpgrades[upgradeData.tier] = upgrade;
+   if (!upgradeData.order) {
+    upgradeData.building === 'Cursor'
+     ? (upgrade.order = 100)
+     : (upgrade.order = Math.floor(Game.Objects[upgradeData.building].tieredUpgrades[1].order) + 0.9999);
+   }
+
+   Game.SetTier(upgradeData.building, upgradeData.tier);
   } else {
-   upgrade.priceFunc = upgradeData.priceFunc;
+   upgradeData.priceFunc && (upgrade.priceFunc = upgradeData.priceFunc);
+   upgrade.tier = upgradeData.tier;
   }
+  upgradeData.order && (upgrade.order = upgradeData.order);
 
   if (upgradeData.kitten) {
    upgrade.kitten = 1;
