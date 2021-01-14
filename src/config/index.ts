@@ -1,4 +1,57 @@
-const modName = 'Cookie Clicker OC Ideas';
-const upgradeIconsUrl = 'https://hyoretsu.github.io/ccideas-mod/static/upgrades.png';
+export const modName = 'Cookie Clicker OC Ideas';
 
-export { modName, upgradeIconsUrl };
+export const upgradeIconsUrl = 'https://hyoretsu.github.io/ccideas-mod/static/upgrades.png';
+export const tierRows = {
+ aura: 3,
+ luminous: 4,
+ misfortune: 0,
+};
+
+export const tierDescs = {
+ default: 's are <b>twice</b> as efficient.',
+ misfortune: 's are <b>6%</b> cheaper and <b>6%</b> more efficient during the last stage of Grandmapocalypse.',
+};
+
+export const endOfOrder = 0.9999;
+
+export const buildingsList = [
+ 'Cursor',
+ 'Grandma',
+ 'Farm',
+ 'Mine',
+ 'Factory',
+ 'Bank',
+ 'Temple',
+ 'Wizard tower',
+ 'Shipment',
+ 'Alchemy lab',
+ 'Portal',
+ 'Time machine',
+ 'Antimatter condenser',
+ 'Prism',
+ 'Chancemaker',
+ 'Fractal engine',
+ 'Javascript console',
+ 'Idleverse',
+];
+export const [
+ cursor,
+ grandma,
+ farm,
+ mine,
+ factory,
+ bank,
+ temple,
+ wizardTower,
+ shipment,
+ alchemyLab,
+ portal,
+ timeMachine,
+ antimatterCondenser,
+ prism,
+ chancemaker,
+ fractalEngine,
+ javascriptConsole,
+ idleverse,
+] = buildingsList;
+export const mouse = 'Mouse';

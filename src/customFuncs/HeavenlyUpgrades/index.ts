@@ -1,4 +1,4 @@
-import { modName, upgradeIconsUrl } from 'config';
+import { modName, upgradeIconsUrl } from '@config';
 
 const HeavenlyUpgrades = (data: ICreateHeavenlyUpgradeDTO[]): void => {
  data.forEach(upgradeData => {

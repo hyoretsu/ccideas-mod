@@ -39,6 +39,12 @@ const config: CustomConfig = {
   path: path.resolve(__dirname, 'dist'),
  },
  resolve: {
+  alias: [
+   {
+    alias: path.resolve(__dirname, 'src', 'config'),
+    name: '@config',
+   },
+  ],
   extensions: ['.ts'],
   modules: [path.resolve(__dirname, 'src')],
  },

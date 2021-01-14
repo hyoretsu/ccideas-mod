@@ -1,4 +1,4 @@
-import { modName } from '../config';
+import { modName } from '@config';
 
 const save = (): string => {
  const saveObj: ISave = {
