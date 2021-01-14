@@ -1,8 +1,9 @@
 declare namespace Game {
  export interface Object {
   basePrice: number;
+  level: number;
   misfortune: Game.TieredUpgradeClass | Game.Upgrade;
-  tieredUpgrades: Game.Upgrade[];
+  tieredUpgrades: Record<string | number, Game.TieredUpgradeClass>;
  }
  export interface Upgrade {
   buildingTie: Game.Object | undefined;
