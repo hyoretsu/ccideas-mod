@@ -21,8 +21,7 @@ const customMods = (): void => {
   tierCount *= 10;
  };
 
- // Aura tier
- Object.assign(Game.Tiers, {
+ const auraTier = {
   aura: {
    color: '#ff7e00',
    iconRow: 3,
@@ -32,10 +31,9 @@ const customMods = (): void => {
    unlock: -1,
    upgrades: [],
   },
- });
+ };
  addTierCount();
- // Luminous tier
- Object.assign(Game.Tiers, {
+ const luminousTier = {
   luminous: {
    color: '#ddb466',
    iconRow: 4,
@@ -45,10 +43,9 @@ const customMods = (): void => {
    unlock: -1,
    upgrades: [],
   },
- });
+ };
  addTierCount();
- // Misfortune tier
- Object.assign(Game.Tiers, {
+ const misfortuneTier = {
   misfortune: {
    color: '#7e5a40',
    iconRow: 0,
@@ -58,7 +55,8 @@ const customMods = (): void => {
    unlock: -1,
    upgrades: [],
   },
- });
+ };
+ Object.assign(Game.Tiers, auraTier, luminousTier, misfortuneTier);
 
  tickerAddons.push(
   // eslint-disable-next-line no-template-curly-in-string

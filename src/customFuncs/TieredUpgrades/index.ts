@@ -1,19 +1,28 @@
-import { modName, upgradeIconsUrl } from 'config';
+import { buildingsList, modName, tierDescs, tierRows, upgradeIconsUrl } from '@config';
 
 const TieredUpgrades = (data: ICreateTieredUpgradeDTO[]): void => {
  data.forEach(upgradeData => {
-  const desc = `${upgradeData.description}${upgradeData.quote ? `<q>${upgradeData.quote}</q>` : ''}`;
-  const icon: Game.Icon = [upgradeData.icon[0], upgradeData.icon[1], upgradeIconsUrl];
+  let desc: string;
+  let icon: Game.Icon;
+  let price: number;
+  const quote = upgradeData.quote ? `<q>${upgradeData.quote}</q>` : '';
 
-  const upgrade = new Game.Upgrade(
-   upgradeData.name,
-   desc,
-   upgradeData.price
-    ? upgradeData.price
-    : // @ts-ignore
-      Game.Objects[upgradeData.building].basePrice * Game.Tiers[upgradeData.tier].price,
-   icon,
-  );
+  upgradeData.description
+   ? (desc = upgradeData.description + quote)
+   : // @ts-ignore
+     (desc = upgradeData.building + (tierDescs[upgradeData.tier] || tierDescs.default) + quote);
+
+  upgradeData.icon
+   ? (icon = [upgradeData.icon[0], upgradeData.icon[1], upgradeIconsUrl])
+   : // @ts-ignore If this is ever reached, there will be a building in upgradeData
+     (icon = [buildingsList.indexOf(upgradeData.building) + 3, tierRows[upgradeData.tier], upgradeIconsUrl]);
+
+  upgradeData.price
+   ? (price = upgradeData.price)
+   : // @ts-ignore If this is ever reached, there will be a building in upgradeData
+     (price = Game.Objects[upgradeData.building].basePrice * Game.Tiers[upgradeData.tier].price);
+
+  const upgrade = new Game.Upgrade(upgradeData.name, desc, price, icon);
   upgrade.mod = modName;
 
   if (upgradeData.building) {
