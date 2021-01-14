@@ -15,30 +15,38 @@ const customMods = (): void => {
  link.href = 'https://hyoretsu.github.io/ccideas-mod/static/styles.css';
  document.getElementsByTagName('head')[0].appendChild(link);
 
+ const baseTierPrice = Game.Tiers[Object.keys(Game.Tiers).length - 3].price;
+ let tierCount = 10;
+ const addTierCount = () => {
+  tierCount *= 10;
+ };
+
  // Aura tier
  Object.assign(Game.Tiers, {
   aura: {
    color: '#ff7e00',
    iconRow: 3,
    name: 'Aura',
-   price: 111111111111111111111111111111111111111111111,
+   price: baseTierPrice * tierCount,
    special: 1,
    unlock: -1,
    upgrades: [],
   },
  });
+ addTierCount();
  // Luminous tier
  Object.assign(Game.Tiers, {
   luminous: {
    color: '#ddb466',
    iconRow: 4,
    name: 'Luminous',
-   price: 111111111111111111111111111111111111111111111,
+   price: baseTierPrice * tierCount,
    special: 1,
    unlock: -1,
    upgrades: [],
   },
  });
+ addTierCount();
  // Misfortune tier
  Object.assign(Game.Tiers, {
   misfortune: {

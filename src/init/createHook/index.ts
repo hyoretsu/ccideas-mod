@@ -13,7 +13,7 @@ const createHook = (): void => {
  TieredUpgrades([
   // Aura tier
   {
-   name: 'Aura furnaces',
+   name: 'Aura furnace',
    description: 'Grandmas are <b>twice</b> as efficient.',
    quote:
     'Your grandmas have successfully mastered the art of baking, and are now able to use their aura to aid them in the process.',
@@ -31,7 +31,7 @@ const createHook = (): void => {
    tier: auraName,
   },
   {
-   name: 'Aura pickaxes',
+   name: 'Aura pickaxe',
    description: 'Mines are <b>twice</b> as efficient.',
    quote: 'Your miners are now able to infuse their pickaxes with aura, making them harder than ever!',
    icon: [6, 3],
@@ -91,7 +91,7 @@ const createHook = (): void => {
    tier: auraName,
   },
   {
-   name: 'Aura portals',
+   name: 'Aura portal',
    description: 'Portals are <b>twice</b> as efficient.',
    quote: 'Through your comprehension of the Space Dao, you can now create portals using your qi.',
    icon: [13, 3],
@@ -147,7 +147,7 @@ const createHook = (): void => {
    tier: auraName,
   },
   {
-   name: 'Aura multiverse',
+   name: 'Aura universe',
    description: 'Idleverses are <b>twice</b> as efficient.',
    quote:
     "It is said that when one's understanding of the Martial Dao gets too profound, an ocean starts forming inside of his own body, eventually becoming a full-fledged world.",
@@ -243,7 +243,7 @@ const createHook = (): void => {
    tier: luminousName,
   },
   {
-   name: 'Luminous time travel',
+   name: 'Luminous travel',
    description: 'Time machines are <b>twice</b> as efficient.',
    quote:
     "By using a strange luminous powder in your time machines, you can know where exactly you're going in spacetime more precisely. Yes, it works. Don't ask how.",
