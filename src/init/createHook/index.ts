@@ -11,7 +11,7 @@ const createHook = (): void => {
  TieredUpgrades([
   {
    name: 'Misfortune #501',
-   description: 'Cursors are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Cursors are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'The decay of a finger will leave 4 others still pointing.',
    icon: [3, 0],
    building: 'Cursor',
@@ -20,7 +20,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #502',
-   description: 'Grandmas are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Grandmas are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'A wrinkle is a crack on the only home you have.',
    icon: [4, 0],
    building: 'Grandma',
@@ -29,7 +29,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #503',
-   description: 'Farms are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Farms are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    // Kiz3r's
    quote: 'Famine is inevitable.',
    icon: [5, 0],
@@ -39,7 +39,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #504',
-   description: 'Mines are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Mines are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    // Kiz3r's
    quote: "The collapse under your life's work.",
    icon: [6, 0],
@@ -49,7 +49,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #505',
-   description: 'Factories are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Factories are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'True worth is not in what you make yourself, but in what you make others do for you.',
    icon: [7, 0],
    building: 'Factory',
@@ -58,7 +58,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #506',
-   description: 'Banks are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Banks are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'The value of money means everything to a banker.',
    icon: [8, 0],
    building: 'Bank',
@@ -67,7 +67,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #507',
-   description: 'Temples are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Temples are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'No idol deserves worship.',
    icon: [9, 0],
    building: 'Temple',
@@ -76,7 +76,8 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #508',
-   description: 'Wizard towers are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description:
+    'Wizard towers are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'Magic is about two things — deceiving and pleasing.',
    icon: [10, 0],
    building: 'Wizard tower',
@@ -85,7 +86,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #509',
-   description: 'Shipments are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Shipments are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'Every mile travelled maddens you just as much',
    icon: [11, 0],
    building: 'Shipment',
@@ -94,7 +95,8 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #510',
-   description: 'Alchemy labs are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description:
+    'Alchemy labs are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    // Kiz3r's
    quote: "You're turning diamonds into coal.",
    icon: [12, 0],
@@ -104,7 +106,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #511',
-   description: 'Portals are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Portals are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    // Kiz3r's
    quote: 'Welcoming unwanted visitors.',
    icon: [13, 0],
@@ -114,7 +116,8 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #512',
-   description: 'Time machines are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description:
+    'Time machines are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    // Kiz3r's
    quote: 'You cannot run from time.',
    icon: [14, 0],
@@ -124,7 +127,8 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #513',
-   description: 'Antimatter condensers are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description:
+    'Antimatter condensers are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'The world is made of what we take from it.',
    icon: [15, 0],
    building: 'Antimatter condenser',
@@ -133,7 +137,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #514',
-   description: 'Prisms are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Prisms are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'Staring at endless darkness can blind you forever from the light.',
    icon: [16, 0],
    building: 'Prism',
@@ -142,7 +146,8 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #515',
-   description: 'Chancemakers are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description:
+    'Chancemakers are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    // Kiz3r's
    quote: "Life's the gamble you will never win.",
    icon: [17, 0],
@@ -152,7 +157,8 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #516',
-   description: 'Fractal engines are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description:
+    'Fractal engines are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    // Kiz3r's
    quote: 'Losing yourself by finding others.',
    icon: [18, 0],
@@ -162,7 +168,8 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #517',
-   description: 'Javascript consoles are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description:
+    'Javascript consoles are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: "If things are working in your computer, they won't in others'",
    icon: [19, 0],
    building: 'Javascript console',
@@ -171,7 +178,7 @@ const createHook = (): void => {
   },
   {
    name: 'Misfortune #518',
-   description: 'Idleverses are 6% cheaper and 6% more efficient during the last stage of Grandmapocalypse.',
+   description: 'Idleverses are 6% cheaper and 6% more efficient, scaling with the current stage of Grandmapocalypse.',
    quote: 'There are too many of everyone, including you.',
    icon: [20, 0],
    building: 'Idleverse',
