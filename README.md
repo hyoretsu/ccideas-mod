@@ -1,6 +1,6 @@
 # Cookie Clicker OC Ideas
 
-A collection of ideas taken from Reddit/Discord for Cookie Clicker mods. Anything goes, as long as you have the sprite/someone willing to make it. You can also suggest ideas for unlock conditions/name/quote. (By default they'll be very bland, like Cheese cursors and no quote since that'd require creativity which I lack)
+A collection of ideas taken from Reddit/Discord for Cookie Clicker mods. Anything goes, as long as you have the sprite/someone willing to make it. You can also suggest ideas for unlock conditions/name/quote on your tiers/achievements. (By default they'll be very bland, like "[tier] [building]" and no quote since that'd require creativity which I lack)
 <br/>
 I get notifications from [Reddit](https://www.reddit.com/user/hyoretsu) and my Discord tag is **Hyoretsu#3939** (preferred)
 
@@ -49,5 +49,5 @@ Use this link: https://hyoretsu.github.io/ccideas-mod/dist/CCIdeas.js
 # Credits
 
 <ul>
- <li>Misfortune tier belongs to <a href="https://twitter.com/Kiz3r_Official" target="_blank" and rel="noopener noreferrer">Kiz3r</a>, his Patreon is https://www.patreon.com/Kiz3r</li>
+ <li>Aura/Luminous/Misfortune tier belongs to <a href="https://twitter.com/Kiz3r_Official" target="_blank" and rel="noopener noreferrer">Kiz3r</a>, his Patreon is https://www.patreon.com/Kiz3r</li>
 </ul>
