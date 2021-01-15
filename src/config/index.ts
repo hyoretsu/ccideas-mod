@@ -9,7 +9,8 @@ export const tierRows = {
 
 export const tierDescs = {
  default: 's are <b>twice</b> as efficient.',
- misfortune: 's are <b>6%</b> cheaper and <b>6%</b> more efficient during the last stage of Grandmapocalypse.',
+ misfortune:
+  's are <b>6%</b> cheaper and <b>6%</b> more efficient, scaling with the current stage of Grandmapocalypse.',
 };
 
 export const endOfOrder = 0.9999;

@@ -22,6 +22,5 @@ const luminousTierChecks = (): (() => void)[] => {
 };
 
 const checkHookContent = [...auraTierChecks(), ...luminousTierChecks()];
-console.log(checkHookContent);
 
 export default checkHookContent;
