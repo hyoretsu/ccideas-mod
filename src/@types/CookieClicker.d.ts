@@ -1,4 +1,6 @@
 declare namespace Game {
+ type Icon = [column: number, line: number, customUrl?: string];
+
  export interface Object {
   basePrice: number;
   level: number;

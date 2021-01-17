@@ -35,7 +35,7 @@ const customMods = (): void => {
  addTierCount();
  const luminousTier = {
   luminous: {
-   color: '#ddb466',
+   color: '#faedb9',
    iconRow: 4,
    name: 'Luminous',
    price: baseTierPrice * tierCount,

@@ -6,7 +6,7 @@ interface ICreateTieredUpgradeDTO {
  quote?: string;
  price?: number;
  priceFunc?: PriceFunc;
- icon?: [column: number, line: number];
+ icon?: Game.Icon;
  building?: string;
  tier: number | string;
  kitten?: true;
@@ -18,7 +18,7 @@ interface ICreateHeavenlyUpgradeDTO {
  description: string;
  quote?: string;
  price: number;
- icon: [column: number, line: number];
+ icon: Game.Icon;
  parents: string[];
  position: [x: number, y: number];
  order: number;
