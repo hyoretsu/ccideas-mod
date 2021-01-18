@@ -7,7 +7,7 @@ const aura = (): ICreateTieredUpgradeDTO[] => {
 
  const upgrades: ICreateTieredUpgradeDTO[] = [
   {
-   name: 'Aura furnace',
+   name: 'Aura oven',
    quote:
     'Your grandmas have successfully mastered the art of baking, and are now able to use their aura to aid them in the process.',
    building: buildings.grandma,
@@ -308,7 +308,7 @@ const misfortune = (): ICreateTieredUpgradeDTO[] => {
   },
   {
    name: 'Misfortune #509',
-   quote: 'Every mile travelled maddens you just as much',
+   quote: 'Every mile travelled maddens you just as much.',
    building: buildings.shipment,
    tier,
    order,
@@ -369,7 +369,7 @@ const misfortune = (): ICreateTieredUpgradeDTO[] => {
   },
   {
    name: 'Misfortune #517',
-   quote: "If things are working in your computer, they won't in others'",
+   quote: "If things are working in your computer, they won't in others'.",
    building: buildings.javascriptConsole,
    tier,
    order,
