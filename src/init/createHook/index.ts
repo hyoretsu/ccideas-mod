@@ -7,36 +7,39 @@ const aura = (): ICreateTieredUpgradeDTO[] => {
 
  const upgrades: ICreateTieredUpgradeDTO[] = [
   {
-   name: 'Aura oven',
+   // Bob's
+   name: 'Auraven',
    quote:
     'Your grandmas have successfully mastered the art of baking, and are now able to use their aura to aid them in the process.',
    building: buildings.grandma,
    tier,
   },
+  // Bob's
   {
-   name: 'Aura seeds',
-   quote:
-    'Your farmers have successfully mastered the art of farming, and are now able to infuse their seeds with aura to make them grow faster.',
+   name: 'Hoe-Fu',
+   quote: 'Quite similar to Shovel-Fu, but with less breaking and more tilling.',
    building: buildings.farm,
    tier,
   },
+  // Bob's
   {
-   name: 'Aura pickaxe',
-   quote: 'Your miners are now able to infuse their pickaxes with aura, making them harder than ever!',
+   name: 'Planebreakers',
+   quote: 'By mining into the very fabric of reality itself, you found a way to get just a tiny bit more cookies.',
    building: buildings.mine,
    tier,
   },
+  // Bob's
   {
-   name: 'Aura cogs',
+   name: 'Perfect workers',
    quote:
-    'These are the epitome of all cogs, created by bending a power called aura to your will and manipulating it to create cogs. They have the perfect amount of friction.',
+    "Before you were using humans to work in your factories, but now you're using Nameks. Your productivity has increased by over 9000 percent!",
    building: buildings.factory,
    tier,
   },
+  // Bob's
   {
-   name: 'Aura cash',
-   quote:
-    'Your bankers have developed a new technique of infusing a certain type of aura into cookies, making their currency even more reliable!',
+   name: 'Aura banking',
+   quote: 'Overdraw into the 4th dimension!',
    building: buildings.bank,
    tier,
   },
@@ -47,28 +50,35 @@ const aura = (): ICreateTieredUpgradeDTO[] => {
    building: buildings.temple,
    tier,
   },
+  // Bob's
   {
-   name: 'Aura spells',
-   quote: 'Using aura as an extra source source of mana, wizards can now summon twice as much cookies.',
+   name: 'Conversion rates',
+   quote:
+    'Apparently by converting aura you get about twice the amount of mana. Gonna have to fire some people for that one.',
    building: buildings.wizardTower,
    tier,
   },
   {
-   name: 'Aura fuel',
-   quote: 'Having no need for aura themselves, astronauts distilled it into their fuel, making it even more efficient.',
+   // Bob's
+   name: 'Aura-fueled ships',
+   quote:
+    'Having no need for aura themselves, your astronauts distilled it into their fuel, making it even more efficient.',
    building: buildings.shipment,
    tier,
   },
+  // Bob's
   {
-   name: 'Aura transmutation',
+   name: 'Qi-kies',
    quote:
-    'Through your vast comprehension of the alchemical laws, you are now able to create cookies from your own qi.',
+    'Through your vast comprehension of the alchemical laws, you are now able to create cookies from your own qi – qi-kies, if you will.',
    building: buildings.alchemyLab,
    tier,
   },
+  // Bob's
   {
-   name: 'Aura portal',
-   quote: 'Through your comprehension of the Space Dao, you can now create portals using your qi.',
+   name: 'Self inflection',
+   quote:
+    'By creating portals from qi, it seems that you can travel inside yourself. A little odd, but more cookies nonetheless.',
    building: buildings.portal,
    tier,
   },
@@ -78,9 +88,10 @@ const aura = (): ICreateTieredUpgradeDTO[] => {
    building: buildings.timeMachine,
    tier,
   },
-  // Seriously?
+  // Bob's
   {
-   name: 'Aura condensers',
+   name: 'Aura manipulators',
+   quote: "There couldn't be that many consequences for manipulating the- [TRANSMISSION LOST].",
    building: buildings.antimatterCondenser,
    tier,
   },
@@ -92,13 +103,16 @@ const aura = (): ICreateTieredUpgradeDTO[] => {
   },
   {
    name: 'Aura dice',
-   quote: "Yes, you've found a way to use your understanding of the world to affect your luck and get more cookies.",
+   // Bob's
+   quote:
+    "Yes, you've found a way to use your understanding of the world to affect your luck and get more cookies. *sigh* Don't you think you have enough luck already?",
    building: buildings.chancemaker,
    tier,
   },
-  // Seriously?
+  // Bob's
   {
-   name: 'Aura fractals',
+   name: "Hilbert's Secret Technique",
+   quote: "It's unreadable, just a whole lot of random squiggles.",
    building: buildings.fractalEngine,
    tier,
   },
@@ -109,7 +123,8 @@ const aura = (): ICreateTieredUpgradeDTO[] => {
    tier,
   },
   {
-   name: 'Aura universe',
+   // Bob's
+   name: 'Auraverse',
    quote:
     "It is said that when one's understanding of the Martial Dao gets too profound, an ocean starts forming inside of his own body, eventually becoming a full-fledged world.",
    building: buildings.idleverse,
