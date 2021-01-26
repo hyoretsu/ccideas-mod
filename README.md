@@ -49,5 +49,6 @@ Use this link: https://hyoretsu.github.io/ccideas-mod/dist/CCIdeas.js
 # Credits
 
 <ul>
+ <li>A lot of upgrade names/quotes were ideas from <a href="https://github.com/MasterOfBob777/" target="_blank" and rel="noopener noreferrer">Bob</a>.</li>
  <li>Aura/Luminous/Misfortune tier belongs to <a href="https://twitter.com/Kiz3r_Official" target="_blank" and rel="noopener noreferrer">Kiz3r</a>, his Patreon is https://www.patreon.com/Kiz3r</li>
 </ul>
