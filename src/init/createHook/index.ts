@@ -135,6 +135,127 @@ const aura = (): ICreateTieredUpgradeDTO[] => {
  return upgrades;
 };
 
+export const haloIdleverseDesc = (): string => `I must've called about ${Beautify(Game.cookiesPs)} times.`;
+const halo = (): ICreateTieredUpgradeDTO[] => {
+ const tier = 'halo';
+
+ const upgrades: ICreateTieredUpgradeDTO[] = [
+  {
+   name: 'Halo flames',
+   quote: "They're easier to work with.",
+   building: buildings.grandma,
+   tier,
+  },
+  {
+   name: 'Halo scarecrow hat',
+   quote: 'It serves to ward off animals in the dark.',
+   building: buildings.farm,
+   tier,
+  },
+  {
+   name: 'Halo cap',
+   quote: 'It really helps to see in the dark!',
+   building: buildings.mine,
+   tier,
+  },
+  {
+   name: 'Halo light bulbs',
+   quote:
+    "These'll be sure to provide good lighting to all those workers throughout the nigh- I mean, when they need it in their law-abiding work hours.",
+   building: buildings.factory,
+   tier,
+  },
+  {
+   name: 'Halo coins',
+   quote: "They don't have the shape you're used to seeing, but that saves resources.",
+   building: buildings.bank,
+   tier,
+  },
+  // Missing quote
+  {
+   name: 'Halo headgear',
+   building: buildings.temple,
+   tier,
+  },
+  // Bob's
+  {
+   name: 'Halo hats',
+   quote: 'Wards off 99% of dark magic!',
+   building: buildings.wizardTower,
+   tier,
+  },
+  {
+   name: 'Halo nose cone',
+   quote: "Outer space is so dark, isn't it? Well, not anymore.",
+   building: buildings.shipment,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Halo transmutation',
+   building: buildings.alchemyLab,
+   tier,
+  },
+  {
+   name: 'Halo portal',
+   quote: "You're now getting cookies from halos here and there.",
+   building: buildings.portal,
+   tier,
+  },
+  // Missing quote
+  {
+   name: 'Halo bezel',
+   building: buildings.timeMachine,
+   tier,
+  },
+  {
+   name: 'Halo condensers',
+   // Bob's
+   quote:
+    '... and the factor of holiness per halo condensed is a function where n is the number of halos and g is the universal condescension constant, 2^ng.',
+   building: buildings.antimatterCondenser,
+   tier,
+  },
+  // Bob's
+  {
+   name: 'Halo refraction',
+   quote:
+    "A halo also gives off light, doesn't it? I guess at this point it doesn't really matter, you'll find a way to make cookies with them.",
+   building: buildings.prism,
+   tier,
+  },
+  // Bob's
+  {
+   name: 'No dice',
+   quote: 'I have them all :)',
+   building: buildings.chancemaker,
+   tier,
+  },
+  {
+   name: 'Halo fractals',
+   // Bob's
+   quote: 'Reflect upon yourself, then again, then again, then again, and now you have a massive space filling curve.',
+   building: buildings.fractalEngine,
+   tier,
+  },
+  {
+   name: 'Halo LED',
+   quote: "It's shiny.",
+   building: buildings.javascriptConsole,
+   tier,
+  },
+  // Bob's
+  {
+   name: 'Halo from the other side',
+   quote: haloIdleverseDesc(),
+   building: buildings.idleverse,
+   tier,
+  },
+ ];
+
+ return upgrades;
+};
+
 const luminous = (): ICreateTieredUpgradeDTO[] => {
  const tier = 'luminous';
 
@@ -466,7 +587,7 @@ const misfortune = (): ICreateTieredUpgradeDTO[] => {
 };
 
 const createHook = (): void => {
- TieredUpgrades([...aura(), ...luminous(), ...misfortune()]);
+ TieredUpgrades([...halo(), ...aura(), ...luminous(), ...misfortune()]);
  HeavenlyUpgrades([
   {
    name: 'Misfortune cookies',

@@ -3,6 +3,7 @@ export const modName = 'Cookie Clicker OC Ideas';
 export const upgradeIconsUrl = 'https://hyoretsu.github.io/ccideas-mod/static/upgrades.png';
 export const tierRows = {
  aura: 3,
+ halo: 5,
  luminous: 4,
  misfortune: 0,
 };

@@ -1,9 +1,24 @@
+import { haloIdleverseDesc } from '../createHook';
+
 const auraTierChecks = (): (() => void)[] => {
  const checkFuncsArray = Game.ObjectsById.filter(building => building.vanilla === 1 && building.name !== 'Cursor').map(
   building => {
    return () => {
     if (Game.Has('Aura gloves') && building.level >= 5) {
      Game.Unlock(building.tieredUpgrades.aura.name);
+    }
+   };
+  },
+ );
+
+ return checkFuncsArray;
+};
+const haloTierChecks = (): (() => void)[] => {
+ const checkFuncsArray = Game.ObjectsById.filter(building => building.vanilla === 1 && building.name !== 'Cursor').map(
+  building => {
+   return () => {
+    if (Game.Has('Halo gloves')) {
+     Game.Unlock(building.tieredUpgrades.halo.name);
     }
    };
   },
@@ -25,6 +40,14 @@ const luminousTierChecks = (): (() => void)[] => {
  return checkFuncsArray;
 };
 
-const checkHookContent = [...auraTierChecks(), ...luminousTierChecks()];
+const checkHookContent = [
+ ...auraTierChecks(),
+ ...haloTierChecks(),
+ (): void => {
+  const upgrade = Game.Upgrades['Halo from the other side'];
+  upgrade.desc = upgrade.desc.replace(upgrade.desc.split(/<\/?q>/)[1], haloIdleverseDesc());
+ },
+ ...luminousTierChecks(),
+];
 
 export default checkHookContent;
