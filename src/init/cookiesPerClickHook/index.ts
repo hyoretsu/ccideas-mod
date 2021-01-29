@@ -1,7 +1,7 @@
 const cookiesPerClickHookContent = (cookiesPerClick: number): number => {
  let cpc = cookiesPerClick;
 
- if (Game.elderWrath === 3 && Game.Has('Misfortune #604')) {
+ if (Game.Has('Misfortune #604')) {
   cpc += Game.cookiesPs * 0.01;
  }
 
