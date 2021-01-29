@@ -21,6 +21,18 @@ const customMods = (): void => {
   tierCount *= 10;
  };
 
+ const haloTier = {
+  halo: {
+   color: '#ffcc2f',
+   iconRow: 5,
+   name: 'Halo',
+   price: baseTierPrice * tierCount,
+   special: 1,
+   unlock: -1,
+   upgrades: [],
+  },
+ };
+ addTierCount();
  const auraTier = {
   aura: {
    color: '#ff7e00',
@@ -56,7 +68,7 @@ const customMods = (): void => {
    upgrades: [],
   },
  };
- Object.assign(Game.Tiers, auraTier, luminousTier, misfortuneTier);
+ Object.assign(Game.Tiers, auraTier, haloTier, luminousTier, misfortuneTier);
 
  tickerAddons.push(
   // eslint-disable-next-line no-template-curly-in-string
