@@ -29,6 +29,7 @@ const config: CustomConfig = {
     use: {
      loader: 'babel-loader',
      options: {
+      compact: true,
       presets: [['@babel/preset-env', { targets: '> 1.5%, not dead' }], '@babel/preset-typescript'],
      },
     },

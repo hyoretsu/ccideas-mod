@@ -2,10 +2,11 @@ import * as buildings from '@config';
 import { TieredUpgrades, HeavenlyUpgrades } from 'customFuncs';
 import { misfortunePrice } from '../customMods';
 
+let upgrades: ICreateTieredUpgradeDTO[];
 const aura = (): ICreateTieredUpgradeDTO[] => {
  const tier = 'aura';
 
- const upgrades: ICreateTieredUpgradeDTO[] = [
+ upgrades = [
   {
    // Bob's
    name: 'Auraven',
@@ -139,7 +140,7 @@ export const haloIdleverseDesc = (): string => `I must've called about ${Beautif
 const halo = (): ICreateTieredUpgradeDTO[] => {
  const tier = 'halo';
 
- const upgrades: ICreateTieredUpgradeDTO[] = [
+ upgrades = [
   {
    name: 'Halo flames',
    quote: "They're easier to work with.",
@@ -259,7 +260,7 @@ const halo = (): ICreateTieredUpgradeDTO[] => {
 const luminous = (): ICreateTieredUpgradeDTO[] => {
  const tier = 'luminous';
 
- const upgrades: ICreateTieredUpgradeDTO[] = [
+ upgrades = [
   {
    name: 'Luminous grandmas',
    quote: 'Your grandmas have called their long-lost relatives to help them bake more cookies.',
@@ -383,7 +384,7 @@ const misfortune = (): ICreateTieredUpgradeDTO[] => {
  };
  const order = 19101;
 
- const upgrades: ICreateTieredUpgradeDTO[] = [
+ upgrades = [
   {
    name: 'Misfortune #501',
    quote: 'The decay of a finger will leave 4 others still pointing.',
