@@ -1,5 +1,5 @@
 {
- "name": "ccreddit-mod",
+ "name": "ccideas-mod",
  "version": "1.1.3",
  "description": "A mod for Cookie Clicker that brings various ideas from r/CookieClicker and Dashnet's Discord to life.",
  "keywords": [
@@ -9,14 +9,14 @@
   "Dashnet",
   "Orteil"
  ],
- "homepage": "https://github.com/hyoretsu/ccreddit-mod",
+ "homepage": "https://github.com/hyoretsu/ccideas-mod",
  "bugs": {
-  "url": "https://github.com/hyoretsu/ccreddit-mod/issues",
+  "url": "https://github.com/hyoretsu/ccideas-mod/issues",
   "email": "hyoretsu@gmail.com"
  },
  "repository": {
   "type": "git",
-  "url": "https://github.com/hyoretsu/ccreddit-mod"
+  "url": "https://github.com/hyoretsu/ccideas-mod"
  },
  "license": "MIT",
  "author": {
@@ -27,11 +27,12 @@
  "main": "./dist/CCIdeas.js",
  "scripts": {
   "build": "webpack",
-  "preinstall": "npx only-allow pnpm"
+  "preinstall": "npx only-allow pnpm",
+  "updateDeps": "pnpm up && git add package.json && git add pnpm-lock.yaml"
  },
  "husky": {
   "hooks": {
-   "pre-commit": "lint-staged && yarn build && git add dist/*"
+   "pre-commit": "lint-staged && npm run build && git add dist/* && npm run updateDeps"
   }
  },
  "lint-staged": {
@@ -46,23 +47,23 @@
   "@babel/preset-typescript": "^7.12.7",
   "@types/babel__core": "^7.1.12",
   "@types/cookieclicker": "^2.31.3",
-  "@typescript-eslint/eslint-plugin": "^4.12.0",
-  "@typescript-eslint/parser": "^4.12.0",
+  "@typescript-eslint/eslint-plugin": "^4.14.1",
+  "@typescript-eslint/parser": "^4.14.1",
   "babel-loader": "^8.2.2",
   "babel-plugin-module-resolver": "^4.1.0",
-  "eslint": "^7.17.0",
+  "eslint": "^7.18.0",
   "eslint-config-airbnb-base": "^14.2.1",
-  "eslint-config-prettier": "^7.1.0",
+  "eslint-config-prettier": "^7.2.0",
   "eslint-import-resolver-typescript": "^2.3.0",
   "eslint-plugin-import": "^2.22.1",
   "eslint-plugin-prettier": "^3.3.1",
-  "husky": "^4.3.7",
+  "husky": "^4.3.8",
   "lint-staged": "^10.5.3",
   "prettier": "^2.2.1",
   "ts-node": "^9.1.1",
   "typescript": "^4.1.3",
-  "webpack": "^5.11.1",
-  "webpack-cli": "^4.3.1"
+  "webpack": "^5.19.0",
+  "webpack-cli": "^4.4.0"
  },
  "ccrepo": {
   "icon": [

@@ -6,15 +6,11 @@ const save = (): string => {
   unlockedUpgrades: [],
  };
 
- Game.UpgradesById.forEach(upgrade => {
-  if (upgrade.mod === modName) {
-   if (upgrade.bought) {
-    saveObj.boughtUpgrades.push(upgrade.name);
-   }
-
-   if (!upgrade.bought && upgrade.unlocked) {
-    saveObj.unlockedUpgrades.push(upgrade.name);
-   }
+ Game.UpgradesById.filter(upgrade => upgrade.mod === modName).forEach(upgrade => {
+  if (upgrade.bought) {
+   saveObj.boughtUpgrades.push(upgrade.name);
+  } else if (upgrade.unlocked) {
+   saveObj.unlockedUpgrades.push(upgrade.name);
   }
  });
 
