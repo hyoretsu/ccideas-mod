@@ -1,8 +1,167 @@
 import * as buildings from '@config';
-import { TieredUpgrades, HeavenlyUpgrades } from 'customFuncs';
+import { Upgrades, TieredUpgrades, HeavenlyUpgrades } from 'customFuncs';
 import { misfortunePrice } from '../customMods';
 
-let upgrades: ICreateTieredUpgradeDTO[];
+let upgrades: any[];
+const buildingCookies = (): ICreateUpgradeDTO[] => {
+ const suffix = 'cookies';
+ const order = 10028;
+ const price = 1e12;
+
+ const cookie = {
+  upgradeReq: 'Box of chocolate buildings',
+  mult: 3,
+ };
+
+ upgrades = [
+  // Missing quote
+  {
+   name: `${buildings.cursor} ${suffix}`,
+   price,
+   icon: [3, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.grandma} ${suffix}`,
+   price: price * 10,
+   icon: [4, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.farm} ${suffix}`,
+   price: price * 100,
+   icon: [5, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.mine} ${suffix}`,
+   price: price * 1000,
+   icon: [6, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.factory} ${suffix}`,
+   price: price * 10000,
+   icon: [7, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.bank} ${suffix}`,
+   price: price * 100000,
+   icon: [8, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.temple} ${suffix}`,
+   price: price * 1e6,
+   icon: [9, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.wizardTower} ${suffix}`,
+   price: price * 1e7,
+   icon: [10, 6],
+   order,
+   cookie,
+  },
+  {
+   name: `${buildings.shipment} ${suffix}`,
+   price: price * 1e8,
+   icon: [11, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.alchemyLab} ${suffix}`,
+   price: price * 1e9,
+   icon: [12, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.portal} ${suffix}`,
+   price: price * 1e10,
+   icon: [13, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.timeMachine} ${suffix}`,
+   price: price * 1e11,
+   icon: [14, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.antimatterCondenser} ${suffix}`,
+   price: price * 1e12,
+   icon: [15, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.prism} ${suffix}`,
+   price: price * 1e13,
+   icon: [16, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.chancemaker} ${suffix}`,
+   price: price * 1e14,
+   icon: [17, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.fractalEngine} ${suffix}`,
+   price: price * 1e15,
+   icon: [18, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.javascriptConsole} ${suffix}`,
+   price: price * 1e16,
+   icon: [19, 6],
+   order,
+   cookie,
+  },
+  // Missing quote
+  {
+   name: `${buildings.idleverse} ${suffix}`,
+   price: price * 1e17,
+   icon: [20, 6],
+   order,
+   cookie,
+  },
+ ];
+
+ return upgrades;
+};
+
 const aura = (): ICreateTieredUpgradeDTO[] => {
  const tier = 'aura';
 
@@ -588,8 +747,19 @@ const misfortune = (): ICreateTieredUpgradeDTO[] => {
 };
 
 const createHook = (): void => {
+ Upgrades([...buildingCookies()]);
  TieredUpgrades([...halo(), ...aura(), ...luminous(), ...misfortune()]);
  HeavenlyUpgrades([
+  {
+   name: 'Box of chocolate buildings',
+   description: 'Contains an assortment of cookies shaped like the buildings that produce those same cookies.',
+   quote: "Wait, I've seen these before...",
+   price: 1000,
+   icon: [1, 1],
+   parents: ['Starter kit'],
+   position: [-460, -430],
+   order: 256,
+  },
   {
    name: 'Misfortune cookies',
    description: 'The news ticker may occasionally have <b>misfortunes</b>, which may be clicked for "something".',
