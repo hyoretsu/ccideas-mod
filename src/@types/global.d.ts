@@ -1,5 +1,19 @@
 type PriceFunc = (data: Game.Upgrade) => number;
 
+interface ICreateUpgradeDTO {
+ name: string;
+ description?: string;
+ quote?: string;
+ price: number;
+ icon: Icon;
+ order?: number;
+ cookie?: {
+  req: number;
+  upgradeReq: string;
+  mult: number;
+ };
+}
+
 interface ICreateTieredUpgradeDTO {
  name: string;
  description?: string;
