@@ -8,7 +8,6 @@ interface ICreateUpgradeDTO {
  icon: Icon;
  order?: number;
  cookie?: {
-  req: number;
   upgradeReq: string;
   mult: number;
  };

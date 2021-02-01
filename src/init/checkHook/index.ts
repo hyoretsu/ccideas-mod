@@ -3,7 +3,7 @@ import { haloIdleverseDesc } from '../createHook';
 const auraTierChecks = (): (() => void)[] => {
  const checkFuncsArray = Game.ObjectsById.filter(building => building.vanilla === 1 && building.name !== 'Cursor').map(
   building => () => {
-   if (Game.Has('Aura gloves') && building.level >= 5) {
+   if (Game.Has('Aura gloves') && building.level >= 5 && building.amount >= 1) {
     Game.Unlock(building.tieredUpgrades.aura.name);
    }
   },
@@ -14,7 +14,7 @@ const auraTierChecks = (): (() => void)[] => {
 const haloTierChecks = (): (() => void)[] => {
  const checkFuncsArray = Game.ObjectsById.filter(building => building.vanilla === 1 && building.name !== 'Cursor').map(
   building => () => {
-   if (Game.Has('Halo gloves')) {
+   if (Game.Has('Halo gloves') && building.amount >= 1) {
     Game.Unlock(building.tieredUpgrades.halo.name);
    }
   },
@@ -25,7 +25,7 @@ const haloTierChecks = (): (() => void)[] => {
 const luminousTierChecks = (): (() => void)[] => {
  const checkFuncsArray = Game.ObjectsById.filter(building => building.vanilla === 1 && building.name !== 'Cursor').map(
   building => () => {
-   if (Game.Has('Luminous gloves') && building.level >= 10) {
+   if (Game.Has('Luminous gloves') && building.level >= 10 && building.amount >= 1) {
     Game.Unlock(building.tieredUpgrades.luminous.name);
    }
   },

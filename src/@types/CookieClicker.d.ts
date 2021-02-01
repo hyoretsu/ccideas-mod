@@ -2,6 +2,7 @@ declare namespace Game {
  type Icon = [column: number, line: number, customUrl?: string];
 
  export interface Object {
+  amount: number;
   basePrice: number;
   level: number;
   misfortune: Game.TieredUpgradeClass | Game.Upgrade;
