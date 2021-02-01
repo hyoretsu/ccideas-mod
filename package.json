@@ -1,6 +1,6 @@
 {
  "name": "ccideas-mod",
- "version": "1.2.1",
+ "version": "1.2.2",
  "description": "A mod for Cookie Clicker that brings various ideas from r/CookieClicker and Dashnet's Discord to life.",
  "keywords": [
   "Cookie Clicker",
@@ -47,8 +47,8 @@
   "@babel/preset-typescript": "^7.12.7",
   "@types/babel__core": "^7.1.12",
   "@types/cookieclicker": "^2.31.3",
-  "@typescript-eslint/eslint-plugin": "^4.14.1",
-  "@typescript-eslint/parser": "^4.14.1",
+  "@typescript-eslint/eslint-plugin": "^4.14.2",
+  "@typescript-eslint/parser": "^4.14.2",
   "babel-loader": "^8.2.2",
   "babel-plugin-module-resolver": "^4.1.0",
   "eslint": "^7.19.0",
