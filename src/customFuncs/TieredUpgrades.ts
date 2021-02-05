@@ -5,7 +5,8 @@ const TieredUpgrades = (data: ICreateTieredUpgradeDTO[]): void => {
   const quote = upgradeData.quote ? `<q>${upgradeData.quote}</q>` : '';
 
   const tierDesc = tierDescs[upgradeData.tier] || tierDescs.default;
-  const desc = (upgradeData.description || upgradeData.building + tierDesc) + quote;
+  // @ts-ignore
+  const desc = (upgradeData.description || upgradeData.building.replace(/y$/, 'ie') + tierDesc) + quote;
 
   let icon: Game.Icon;
   if (upgradeData.icon) {
