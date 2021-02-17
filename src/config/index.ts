@@ -6,6 +6,7 @@ export const tierRows: Record<string, number> = {
  halo: 5,
  luminous: 4,
  misfortune: 0,
+ raingrid: 7,
 };
 
 export const tierDescs: Record<string, string> = {

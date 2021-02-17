@@ -746,9 +746,127 @@ const misfortune = (): ICreateTieredUpgradeDTO[] => {
  return upgrades;
 };
 
+const raingrid = (): ICreateTieredUpgradeDTO[] => {
+ const tier = 'raingrid';
+
+ upgrades = [
+  // Missing quote
+  {
+   name: 'Raingrid fingers',
+   description: 'Multiplies the gain from Thousand fingers by <b>50</b>.',
+   building: buildings.cursor,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid rolling pins',
+   building: buildings.grandma,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid seeds',
+   building: buildings.farm,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid pickaxe',
+   building: buildings.mine,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid cogs',
+   building: buildings.factory,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid cash',
+   building: buildings.bank,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid temples',
+   building: buildings.temple,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid grimoire',
+   building: buildings.wizardTower,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid spaceship',
+   building: buildings.shipment,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid transmutation',
+   building: buildings.alchemyLab,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid portal',
+   building: buildings.portal,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid paradox',
+   building: buildings.timeMachine,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid condensers',
+   building: buildings.antimatterCondenser,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid prism',
+   building: buildings.prism,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid dice',
+   building: buildings.chancemaker,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid fractals',
+   building: buildings.fractalEngine,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid functions',
+   building: buildings.javascriptConsole,
+   tier,
+  },
+  // Seriously?
+  {
+   name: 'Raingrid universe',
+   building: buildings.idleverse,
+   tier,
+  },
+ ];
+
+ return upgrades;
+};
+
 const createHook = (): void => {
  Upgrades([...buildingCookies()]);
- TieredUpgrades([...halo(), ...aura(), ...luminous(), ...misfortune()]);
+ TieredUpgrades([...raingrid(), ...halo(), ...aura(), ...luminous(), ...misfortune()]);
  HeavenlyUpgrades([
   {
    name: 'Box of chocolate buildings',

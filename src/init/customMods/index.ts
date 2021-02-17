@@ -5,6 +5,7 @@ const customMods = (): void => {
  const modifyBuildingPriceAddons: string[] = [];
  const upgradeGetPriceAddons: string[] = [];
  const getTieredCpsMultAddons: string[] = [];
+ const cursorCpsAddons: string[] = [];
  const offlineCpsAddons: string[] = [];
  const kittenUpgradeAddons: string[] = [];
 
@@ -21,6 +22,17 @@ const customMods = (): void => {
   tierCount *= 10;
  };
 
+ const raingridTier = {
+  raingrid: {
+   color: '#a000d5',
+   iconRow: 7,
+   name: 'Raingrid',
+   price: baseTierPrice * tierCount,
+   unlock: -1,
+   upgrades: [],
+  },
+ };
+ addTierCount();
  const haloTier = {
   halo: {
    color: '#ffcc2f',
@@ -65,7 +77,7 @@ const customMods = (): void => {
    upgrades: [],
   },
  };
- Object.assign(Game.Tiers, auraTier, haloTier, luminousTier, misfortuneTier);
+ Object.assign(Game.Tiers, auraTier, haloTier, luminousTier, misfortuneTier, raingridTier);
 
  tickerAddons.push(
   // eslint-disable-next-line no-template-curly-in-string
@@ -74,12 +86,13 @@ const customMods = (): void => {
  modifyBuildingPriceAddons.push(
   "if(building.vanilla===1&&Game.Has(building.tieredUpgrades.misfortune.name)){switch(Game.elderWrath){case 1:price*=0.98;break;case 2:price*=0.96;break;case 3:price*=0.94;break;}}if(Game.Has('Misfortune #600')){price*=0.99;}",
  );
- upgradeGetPriceAddons.push("if(Game.Has('Misfortune #600')){price*=0.99}");
+ upgradeGetPriceAddons.push("if(Game.Has('Misfortune #600')){price*=0.99;}");
  getTieredCpsMultAddons.push(
   'if(me.vanilla===1&&Game.Has(me.tieredUpgrades.misfortune.name)){switch(Game.elderWrath){case 1:mult*=1.02;break;case 2:mult*=1.04;break;case 3:mult*=1.06;break;}}',
  );
- offlineCpsAddons.push("if(Game.Has('Misfortune #602')){percent+=1}");
- kittenUpgradeAddons.push("if(Game.Has('Misfortune #603')){catMult*=1+Game.milkProgress*0.05*milkMult}");
+ cursorCpsAddons.push("if(Game.Has('Raingrid fingers')){add*=50;}");
+ offlineCpsAddons.push("if(Game.Has('Misfortune #602')){percent+=1;}");
+ kittenUpgradeAddons.push("if(Game.Has('Misfortune #603')){catMult*=1+Game.milkProgress*0.05*milkMult;}");
 
  // Inject code into vanilla fuctions
  Game.getNewTicker = new Function(
@@ -104,6 +117,19 @@ const customMods = (): void => {
   `return ${Game.GetTieredCpsMult.toString()
    .split('return mult')
    .join(`${getTieredCpsMultAddons.join('\n')}` + '\n\nreturn mult')}`,
+ )();
+ const thousandFingersCheck = "if (Game.Has('Thousand fingers')) add+=		0.1;";
+ Game.mouseCps = new Function(
+  `return ${Game.mouseCps
+   .toString()
+   .split(thousandFingersCheck)
+   .join(`${thousandFingersCheck}\n` + `${cursorCpsAddons.join('\n')}`)}`,
+ )();
+ Game.Objects.Cursor.cps = new Function(
+  `return ${Game.Objects.Cursor.cps
+   .toString()
+   .split(thousandFingersCheck)
+   .join(`${thousandFingersCheck}\n` + `${cursorCpsAddons.join('\n')}`)}`,
  )();
  Game.LoadSave = new Function(
   `return ${Game.LoadSave.toString()

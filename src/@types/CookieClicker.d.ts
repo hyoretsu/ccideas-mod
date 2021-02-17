@@ -4,9 +4,10 @@ declare namespace Game {
  export interface Object {
   amount: number;
   basePrice: number;
+  cps: (building: Game.Object) => number;
   level: number;
   misfortune: Game.TieredUpgradeClass | Game.Upgrade;
-  tieredUpgrades: Record<string | number, Game.TieredUpgradeClass>;
+  tieredUpgrades: Record<string | number, Game.Upgrade>;
  }
  export interface Upgrade {
   buildingTie: Game.Object | undefined;
