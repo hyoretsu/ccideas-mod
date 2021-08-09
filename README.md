@@ -7,6 +7,13 @@ I get notifications from [Reddit](https://www.reddit.com/user/hyoretsu) and my D
 # Usage
 
 <details>
+<summary>Cppkies Mod Manager</summary>
+<br/>
+1. Install [this extension](https://chrome.google.com/webstore/detail/cppkies-mod-manager/bjooleocnlcahbnfieoojeijeddfdnfe) if you're on Chrome or [this one](https://addons.mozilla.org/firefox/addon/cppkies-mod-manager) if you're on Firefox.
+2. Go to [CCRepo](https://ccrepo.glander.club/all).
+3. Click on Cookie Clicker OC Ideas and then "Subscribe".
+</details>
+<details>
 <summary>Bookmark</summary>
 <br/>
 <pre>
