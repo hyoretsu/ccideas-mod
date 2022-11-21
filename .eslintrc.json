@@ -1,53 +1,88 @@
 {
- "env": {
-  "es6": true
- },
- "extends": [
-  "airbnb-base",
-  "plugin:@typescript-eslint/recommended",
-  "plugin:prettier/recommended",
-  "prettier/@typescript-eslint"
- ],
- "globals": {
-  "Atomics": "readonly",
-  "SharedArrayBuffer": "readonly"
- },
- "parser": "@typescript-eslint/parser",
- "parserOptions": {
-  "ecmaVersion": 11,
-  "sourceType": "module"
- },
- "plugins": ["@typescript-eslint", "prettier"],
- "rules": {
-  "@typescript-eslint/camelcase": "off",
-  "@typescript-eslint/no-empty-function": "warn",
-  "@typescript-eslint/no-explicit-any": "off",
-  "@typescript-eslint/no-unused-vars": "off",
-  // Orteil is dumb so this is necessary
-  "@typescript-eslint/ban-ts-comment": "off",
-  "default-case": "off",
-  "import/extensions": [
-   "error",
-   "ignorePackages",
-   {
-    "ts": "never"
-   }
-  ],
-  "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-  "no-empty": "warn",
-  "no-new": "off",
-  "no-new-func": "off",
-  "no-prototype-builtins": "off",
-  "no-restricted-syntax": "off",
-  "no-underscore-dangle": "off",
-  "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
-  // Way prettier than writing it all as one string
-  "no-useless-concat": "off",
-  "prettier/prettier": "error"
- },
- "settings": {
-  "import/resolver": {
-   "typescript": {}
-  }
- }
+    "env": {
+        "es6": true
+    },
+    "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier"],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "plugins": ["import-helpers"],
+    "rules": {
+        "default-case": "off",
+        "import/no-duplicates": "off",
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "import/prefer-default-export": "off",
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "alphabetize": {
+                    "order": "asc"
+                }
+            }
+        ],
+        "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+        "no-constant-condition": ["error", { "checkLoops": false }],
+        "no-continue": "off",
+        "no-empty": "warn",
+        "no-loop-func": "off",
+        "no-new": "off",
+        "no-new-func": "off",
+        "no-param-reassign": "off",
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+        "no-prototype-builtins": "off",
+        "no-restricted-syntax": "off",
+        "no-underscore-dangle": "off",
+        "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+        "no-unused-vars": ["warn", { "argsIgnorePattern": "^_|next" }],
+        // Way prettier than writing it all as one string
+        "no-useless-concat": "off",
+        "one-var": ["error", { "uninitialized": "always" }],
+        "prefer-const": "warn",
+        "prefer-destructuring": "warn",
+        "prettier/prettier": [
+            "error",
+            {
+                "arrowParens": "avoid",
+                "printWidth": 100,
+                "singleQuote": true,
+                "tabWidth": 4,
+                "trailingComma": "all"
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": ["**/*.ts"],
+            "extends": ["plugin:@typescript-eslint/recommended"],
+            "parser": "@typescript-eslint/parser",
+            "parserOptions": {
+                "ecmaVersion": "latest",
+                "sourceType": "module"
+            },
+            "plugins": ["@typescript-eslint"],
+            "rules": {
+                // Orteil is dumb so this is necessary
+                "@typescript-eslint/ban-ts-comment": "off",
+                "@typescript-eslint/camelcase": "off",
+                "@typescript-eslint/no-empty-function": "warn",
+                "@typescript-eslint/no-explicit-any": "off",
+                "@typescript-eslint/no-namespace": "off",
+                "@typescript-eslint/no-unused-vars": "off",
+                "import/extensions": [
+                    "error",
+                    "ignorePackages",
+                    {
+                        "ts": "never"
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    }
 }

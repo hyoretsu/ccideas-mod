@@ -1,11 +1,11 @@
 const cookiesPerClickHookContent = (cookiesPerClick: number): number => {
- let cpc = cookiesPerClick;
+    let cpc = cookiesPerClick;
 
- if (Game.Has('Misfortune #604')) {
-  cpc += Game.cookiesPs * 0.01;
- }
+    if (Game.Has('Misfortune #604')) {
+        cpc += Game.cookiesPs * 0.01;
+    }
 
- return cpc;
+    return cpc;
 };
 
 export default cookiesPerClickHookContent;

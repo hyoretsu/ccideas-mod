@@ -5,11 +5,11 @@ import createHook from './createHook';
 import customMods from './customMods';
 
 const init = (): void => {
- customMods();
- Game.registerHook('check', checkHookContent);
- Game.registerHook('cookiesPerClick', cookiesPerClickHookContent);
- Game.registerHook('cps', cpsHookContent);
- createHook();
+    customMods();
+    Game.registerHook('check', checkHookContent);
+    Game.registerHook('cookiesPerClick', cookiesPerClickHookContent);
+    Game.registerHook('cps', cpsHookContent);
+    createHook();
 };
 
 export default init;
