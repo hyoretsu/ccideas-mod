@@ -46,6 +46,26 @@ const luminousTierChecks = (): (() => void)[] => {
     return checkFuncsArray;
 };
 
+const genericTiersChecks = (tiers: string[]) => {
+    const checkFuncsArray = buildingsList
+        .slice(1)
+        .map(buildingName =>
+            tiers.map(tier => () => {
+                const building = Game.Objects[buildingName];
+
+                if (building.amount >= 1) {
+                    Game.UnlockAt.push({
+                        name: building.tieredUpgrades[tier].name,
+                        cookies: building.tieredUpgrades[tier].basePrice / 20,
+                    });
+                }
+            }),
+        )
+        .reduce((array, buildingChecks) => [...array, ...buildingChecks], []);
+
+    return checkFuncsArray;
+};
+
 const checkHookContent = [
     ...auraTierChecks(),
     ...haloTierChecks(),
@@ -54,6 +74,7 @@ const checkHookContent = [
         upgrade.desc = upgrade.desc.replace(upgrade.desc.split(/<\/?q>/)[1], haloIdleverseDesc());
     },
     ...luminousTierChecks(),
+    ...genericTiersChecks(['raingrid']),
 ];
 
 export default checkHookContent;
