@@ -1,0 +1,11 @@
+{
+	"Name": "Cookie Clicker OC Ideas",
+	"ID": "ccideas",
+	"Author": "Hyoretsu",
+	"Description": "A collection of ideas taken from Reddit/Discord for Cookie Clicker mods.",
+	"ModVersion": 1.2,
+	"GameVersion": 2.048,
+	"Date": "21/11/2022",
+	"Dependencies": [],
+	"Disabled": 0
+}

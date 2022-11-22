@@ -12,7 +12,7 @@ try {
         external: ['./node_modules/*'],
         keepNames: true,
         minify: true,
-        outfile: 'dist/CCIdeas.js',
+        outdir: 'ccideas',
         platform: 'browser',
         sourcemap: true,
         target: browserslistToEsbuild(['> 1.5%', 'not dead']),
